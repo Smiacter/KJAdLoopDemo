@@ -19,7 +19,12 @@
     [super viewDidLoad];
     [self createAdRoll];
 }
-// 创建顶部滚动广告栏
+
+/**
+ *  @author Smiacter, 15-05-05 23:05:26
+ *
+ *  创建广告栏
+ */
 -(void)createAdRoll
 {
     NSArray *tempArr = [NSArray arrayWithObjects:@"honey1",@"honey2",@"honey3",@"honey4", nil];
@@ -28,14 +33,26 @@
     self.adScrollView.delegate = self;
     [self.view addSubview:self.adScrollView];
 }
-// 点击广告图代理
+/**
+ *  @author Smiacter, 15-05-05 23:05:05
+ *
+ *  点击广告图代理
+ *
+ *  @return void
+ */
 -(void)tapImageAtIndex:(NSInteger)index
 {
     NSString *showStr = [NSString stringWithFormat:@"图片%ld被点击", (long)index];
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"消息窗口" message:showStr delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     [alertView show];
 }
-// 在需要跳转到其他VC时，释放定时器
+/**
+ *  @author Smiacter, 15-05-05 23:05:28
+ *
+ *  在需要跳转到其他VC时，释放定时器
+ *
+ *  @return void
+ */
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self.adScrollView releasTimer];
