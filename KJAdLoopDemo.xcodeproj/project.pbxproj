@@ -14,6 +14,7 @@
 		186DD8F11AF8728400F0DFE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186DD8F01AF8728400F0DFE5 /* Images.xcassets */; };
 		186DD8F41AF8728400F0DFE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186DD8F21AF8728400F0DFE5 /* LaunchScreen.xib */; };
 		186DD9001AF8728400F0DFE5 /* KJAdLoopDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DD8FF1AF8728400F0DFE5 /* KJAdLoopDemoTests.m */; };
+		186DD90C1AF872F500F0DFE5 /* KJAdLoopRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DD90B1AF872F500F0DFE5 /* KJAdLoopRollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		186DD8F91AF8728400F0DFE5 /* KJAdLoopDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJAdLoopDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		186DD8FE1AF8728400F0DFE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186DD8FF1AF8728400F0DFE5 /* KJAdLoopDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAdLoopDemoTests.m; sourceTree = "<group>"; };
+		186DD90A1AF872F500F0DFE5 /* KJAdLoopRollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KJAdLoopRollView.h; path = KJAdLoopRollView/KJAdLoopRollView.h; sourceTree = SOURCE_ROOT; };
+		186DD90B1AF872F500F0DFE5 /* KJAdLoopRollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KJAdLoopRollView.m; path = KJAdLoopRollView/KJAdLoopRollView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		186DD8E21AF8728400F0DFE5 /* KJAdLoopDemo */ = {
 			isa = PBXGroup;
 			children = (
+				186DD9091AF872D500F0DFE5 /* KJAdLoopRollView */,
 				186DD8E71AF8728400F0DFE5 /* AppDelegate.h */,
 				186DD8E81AF8728400F0DFE5 /* AppDelegate.m */,
 				186DD8EA1AF8728400F0DFE5 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				186DD8FE1AF8728400F0DFE5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		186DD9091AF872D500F0DFE5 /* KJAdLoopRollView */ = {
+			isa = PBXGroup;
+			children = (
+				186DD90A1AF872F500F0DFE5 /* KJAdLoopRollView.h */,
+				186DD90B1AF872F500F0DFE5 /* KJAdLoopRollView.m */,
+			);
+			name = KJAdLoopRollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				186DD8EC1AF8728400F0DFE5 /* ViewController.m in Sources */,
+				186DD90C1AF872F500F0DFE5 /* KJAdLoopRollView.m in Sources */,
 				186DD8E91AF8728400F0DFE5 /* AppDelegate.m in Sources */,
 				186DD8E61AF8728400F0DFE5 /* main.m in Sources */,
 			);
