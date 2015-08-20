@@ -72,6 +72,7 @@
             UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[self.imageArray objectAtIndex:0]]];
             imageView.frame = CGRectMake(imageWidth*(imageCount+1), 0, imageWidth, imageHeight);//相当于第一张图片放在了scroll view最后的位置上
             imageView.userInteractionEnabled = YES;
+            imageView.contentMode = UIViewContentModeScaleAspectFill;
             UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage)];
             [imageView addGestureRecognizer:tapGes];
             [self.scrollView addSubview:imageView];
@@ -81,6 +82,7 @@
             UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[self.imageArray objectAtIndex:(imageCount-1)]]];
             imageView.frame = CGRectMake(0, 0, imageWidth, imageHeight);//相当于显示第一张图片
             imageView.userInteractionEnabled = YES;
+            imageView.contentMode = UIViewContentModeScaleAspectFill;
             UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage)];
             [imageView addGestureRecognizer:tapGes];
             [self.scrollView addSubview:imageView];
@@ -91,6 +93,7 @@
             UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[self.imageArray objectAtIndex:(i-1)]]];
             imageView.frame = CGRectMake(imageWidth*i, 0, imageWidth, imageHeight);
             imageView.userInteractionEnabled = YES;
+            imageView.contentMode = UIViewContentModeScaleAspectFill;
             UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage)];
             [imageView addGestureRecognizer:tapGes];
             [self.scrollView addSubview:imageView];
@@ -100,7 +103,7 @@
 -(void)setupPageControl
 {
     // pageControl显示在接近中间位置
-    self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(imageWidth/2-20, imageHeight, 70, 20)];
+    self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(imageWidth/2-10*imageCount, 50, 70, 20)];
     self.pageControl.numberOfPages = imageCount;//page总数
     self.pageControl.currentPage = 0;//当前page(默认为0)
     self.pageControl.pageIndicatorTintColor = [UIColor grayColor];//未选中的page颜色
